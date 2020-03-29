@@ -15,7 +15,8 @@ Error checking for text strings or other invalid inputs is not required, only va
 """
 
 def narcissistic( value ):
-  return
+  return sum([int(char) ** len(str(value)) for char in str(value)]) == value
 
 # Driver
-narcissistic(123)
+print(narcissistic(123))
+print(narcissistic(1634))
